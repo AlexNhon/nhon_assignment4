@@ -1,0 +1,11 @@
+lightning
+lava
+gravity
+earth
+fire
+magma
+thunder
+flame
+water
+wind
+stone
