@@ -32,11 +32,19 @@ public class DuplicateCounter {
 	}
 	public void write(String outputFile) {
 		File file = new File(outputFile);
+		int count;
 	    try {
 	    	   PrintWriter writer = new PrintWriter(file);
 			   scan = new Scanner(file);
 			   for (String word : wordCounter.keySet()) {
-				   writer.println(word + ": " + wordCounter.get(word));
+				   count = wordCounter.get(word);
+				   if(count == 1) {
+					   writer.println(word + ": " + count + " time");
+				   }
+				   else if(count == 0 || count >=2) {
+					   writer.println(word + ": " + count + " times");
+				   }
+				   
 			   }
 			   writer.close();
 		   } catch(IOException e) {

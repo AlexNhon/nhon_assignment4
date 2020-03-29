@@ -31,7 +31,7 @@ public class DuplicateRemover {
 	    	   PrintWriter writer = new PrintWriter(file);
 			   scan = new Scanner(file);
 			   for (String uniqueWords : uniqueWords) {
-				   writer.println(uniqueWords);
+				   writer.println(uniqueWords);			   
 			   }
 			   writer.close();
 		   } catch(IOException e) {
