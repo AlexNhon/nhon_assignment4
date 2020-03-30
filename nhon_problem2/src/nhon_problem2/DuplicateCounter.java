@@ -17,7 +17,7 @@ public class DuplicateCounter {
 			scan = new Scanner(file);
 			String currentWord;
 			while (scan.hasNext()) {
-				currentWord = scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " "); // replaces non-letters with space
+				currentWord = scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", ""); // replaces non-letters with space
 				if(wordCounter.get(currentWord) == null) {
 					wordCounter.put(currentWord, 1);
 				}

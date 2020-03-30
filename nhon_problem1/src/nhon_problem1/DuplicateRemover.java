@@ -18,7 +18,7 @@ public class DuplicateRemover {
 		   
 		   scan = new Scanner(file);
 		   while (scan.hasNext()) {
-			   uniqueWords.add(scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " ")); // replaces non-letters with space
+			   uniqueWords.add(scan.next().toLowerCase().replaceAll("[\\[\\],\\.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", "")); // replaces non-letters with space
 		   }
 		   scan.close();
 	   } catch(IOException e) {
