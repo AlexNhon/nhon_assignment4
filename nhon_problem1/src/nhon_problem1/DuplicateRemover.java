@@ -18,7 +18,7 @@ public class DuplicateRemover {
 		   
 		   scan = new Scanner(file);
 		   while (scan.hasNext()) {
-			   uniqueWords.add(scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " "));
+			   uniqueWords.add(scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " ")); // replaces non-letters with space
 		   }
 		   scan.close();
 	   } catch(IOException e) {
@@ -31,7 +31,7 @@ public class DuplicateRemover {
 	    try {
 	    	   PrintWriter writer = new PrintWriter(file);
 			   for (String uniqueWords : uniqueWords) {
-				   if(!uniqueWords.matches(".*[a-z].*")) {
+				   if(!uniqueWords.matches(".*[a-z].*")) { // Checks to see if string is made up of only letters
 					   continue;
 				   }
 				   else {

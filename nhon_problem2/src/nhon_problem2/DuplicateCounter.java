@@ -17,7 +17,7 @@ public class DuplicateCounter {
 			scan = new Scanner(file);
 			String currentWord;
 			while (scan.hasNext()) {
-				currentWord = scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " ");
+				currentWord = scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " "); // replaces non-letters with space
 				if(wordCounter.get(currentWord) == null) {
 					wordCounter.put(currentWord, 1);
 				}
@@ -37,7 +37,7 @@ public class DuplicateCounter {
 	    	   PrintWriter writer = new PrintWriter(file);
 			   for (String word : wordCounter.keySet()) {
 				   count = wordCounter.get(word);
-				   if(!word.matches(".*[a-z].*")){
+				   if(!word.matches(".*[a-z].*")){// Checks to see if string is made up of only letters
 					   continue;
 				   }
 				   else {
