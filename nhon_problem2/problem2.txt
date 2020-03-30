@@ -1,9 +1,11 @@
 Fire
 Water
 Wind
+[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]"
 Lightning
+Lightning.
 Thunder
-Earth
+Earth's
 Flame
 Thunder
 Fire

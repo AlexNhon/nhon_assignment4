@@ -2,10 +2,12 @@ Fire
 Water
 Wind
 Lightning
-Thunder
-Earth
-Flame
-Thunder
+Lightning.
+Thunder^
+Earth's
+Flame**
+[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]
+Thunder\242
 Fire
 fire
 Stone

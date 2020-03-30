@@ -14,10 +14,11 @@ public class DuplicateRemover {
 
    public void remove(String dataFile) {
 	   File file = new File(dataFile);
-	   try {
+	   try {	  
+		   
 		   scan = new Scanner(file);
 		   while (scan.hasNext()) {
-			   uniqueWords.add(scan.next().toLowerCase());
+			   uniqueWords.add(scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " "));
 		   }
 		   scan.close();
 	   } catch(IOException e) {
@@ -29,9 +30,14 @@ public class DuplicateRemover {
 	   File file = new File(outputFile);
 	    try {
 	    	   PrintWriter writer = new PrintWriter(file);
-			   scan = new Scanner(file);
 			   for (String uniqueWords : uniqueWords) {
-				   writer.println(uniqueWords);			   
+				   if(!uniqueWords.matches(".*[a-z].*")) {
+					   continue;
+				   }
+				   else {
+					   writer.println(uniqueWords);
+				   }
+				   			   
 			   }
 			   writer.close();
 		   } catch(IOException e) {

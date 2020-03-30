@@ -1,11 +1,12 @@
 lightning: 1 time
-lava: 1 time
-gravity: 1 time
-earth: 1 time
-fire: 3 times
 magma: 1 time
 thunder: 3 times
-flame: 1 time
 water: 2 times
-wind: 2 times
+earth's: 1 time
 stone: 1 time
+lava: 1 time
+lightning : 1 time
+gravity: 1 time
+fire: 3 times
+flame: 1 time
+wind: 2 times

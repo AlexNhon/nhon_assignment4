@@ -17,7 +17,7 @@ public class DuplicateCounter {
 			scan = new Scanner(file);
 			String currentWord;
 			while (scan.hasNext()) {
-				currentWord = scan.next().toLowerCase();
+				currentWord = scan.next().toLowerCase().replaceAll("[\\[\\],.\"?\\{\\}`()!*@#$%^&;:|=+-_~]", " ");
 				if(wordCounter.get(currentWord) == null) {
 					wordCounter.put(currentWord, 1);
 				}
@@ -35,14 +35,18 @@ public class DuplicateCounter {
 		int count;
 	    try {
 	    	   PrintWriter writer = new PrintWriter(file);
-			   scan = new Scanner(file);
 			   for (String word : wordCounter.keySet()) {
 				   count = wordCounter.get(word);
-				   if(count == 1) {
-					   writer.println(word + ": " + count + " time");
+				   if(!word.matches(".*[a-z].*")){
+					   continue;
 				   }
-				   else if(count == 0 || count >=2) {
-					   writer.println(word + ": " + count + " times");
+				   else {
+					   if(count == 1) {
+						   writer.println(word + ": " + count + " time");
+					   }
+					   else if(count == 0 || count >=2) {
+						   writer.println(word + ": " + count + " times");
+					   }  
 				   }
 				   
 			   }
